@@ -52,8 +52,8 @@ def create_rfm_df(df):
     return rfm_df
 
 # Load dataset
-all_df = pd.read_csv('../ordered_df.csv')
-satisfaction_df = pd.read_csv('../satisfaction_df.csv')
+all_df = pd.read_csv('ordered_df.csv')
+satisfaction_df = pd.read_csv('satisfaction_df.csv')
 
 # Convert order_approved_at to datetime
 all_df['order_approved_at'] = pd.to_datetime(all_df['order_approved_at'])
@@ -647,7 +647,7 @@ colors = [
 st.header("Geospatial Customer Distribution in Brazil")
 
 # Create a copy of your dataframe
-geo_df = pd.read_csv('../geo_result_df.csv')
+geo_df = pd.read_csv('geo_result_df.csv')
 
 try:
     # Create geometry from coordinates
